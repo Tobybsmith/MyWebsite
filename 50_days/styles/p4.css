@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #191919;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    background-color: #F9E492;
+    border: 0;
+    height: 50px;
+    width: 50px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+input[type=text]{
+    z-index: -100;
+    border: 0;
+    height: 48px;
+    background-color: #F9E492;
+    color: #191919;
+}
+.hidden{
+    transition: width 250ms ease-in;
+    width: 0px;
+}
+.show{
+    transition: width 250ms ease-in;
+    width: 148px;
+}

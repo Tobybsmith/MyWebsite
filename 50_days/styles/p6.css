@@ -1,0 +1,35 @@
+body{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #007065;
+    height: 200vh;
+    overflow-x: hidden;
+}
+.element{
+    font-size: 3rem;
+    font-family: sans-serif;
+    margin: 50px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 20vh;
+    border-radius: 20%;
+    background-color: #00A79D;
+    color: #FFEECF;
+}
+.shown.left{
+    transition: transform 100ms ease-in;
+    transform: translateX(0vw);
+}
+.shown.right{
+    transition: transform 100ms ease-in;
+    transform: translateX(0vw);
+}
+.hidden.left{
+    transform: translateX(-60vw);
+}
+.hidden.right{
+    transform: translateX(60vw);
+}

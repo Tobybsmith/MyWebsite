@@ -1,0 +1,54 @@
+:root{
+    --main-col: #F6DF96;
+    --sec-col: #6CB3A9;
+}
+
+body{
+    display: flex;
+    background-color: #D25B70;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+}
+.container{
+    width: 80vw;
+    display: flex;
+    margin: 50vw;
+    margin-top: 75vh;
+}
+.node{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: var(--main-col);
+    margin: 100px;
+    box-shadow: 0 0 0 10px var(--sec-col);
+    color: var(--sec-col);
+}
+.active{
+    background-color: var(--sec-col);
+    box-shadow: 0 0 0 10px var(--main-col);
+    color: var(--main-col)
+}
+.next{
+    position: absolute;
+    transform: translateX(5vw);
+    background-color: var(--main-col);
+    color: var(--sec-col);
+}
+.prev{
+    position: absolute;
+    transform: translateX(-5vw);
+    background-color: var(--main-col);
+    color: var(--sec-col);
+}
+.test{
+    position: absolute;
+    background-color: white;
+    color: black;
+}

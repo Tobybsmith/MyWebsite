@@ -1,0 +1,79 @@
+body{
+    background-color: bisque;
+    color: black;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    color: black;
+    padding: 0.125rem 1rem 0.125rem 1rem;
+    border: darkgoldenrod solid 0.125rem;
+}
+h1{
+    color:darkolivegreen;
+}
+header{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: brown solid 0.125rem;
+}
+.firstpart{
+    grid-column: 1/3;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0.125rem;
+    padding: 0.125rem;
+    border: black solid 0.125rem;
+}
+.firstpart p{
+    margin: auto;
+    text-align: justify;
+    grid-column: 1;
+}
+.firstpart img{
+    width: 50%;
+    grid-column: 2;
+    justify-self: end;
+}
+.secondpart{
+    grid-column: 1/3;
+    grid-row: 2;
+    margin: 0.125rem;
+    padding: 0.125rem;
+    border: darkgreen solid 0.125rem;
+}
+.working{
+    padding: 0.125rem;
+    border: darkslateblue solid 0.125rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.element{
+    padding: 0.125rem;
+    margin: 0.125rem;
+    border: darkslategray solid 0.125rem;
+    background-color: darksalmon;
+    color: black;
+}
+.element p{
+    margin: 0;
+    text-align: center;
+}
+.element img{
+    width: 100%;
+}
+.thirdpart{
+    grid-column: 3;
+    grid-row: 1/3;
+    margin: 0.125rem;
+    padding-top: 1rem;
+    text-align: center;
+    border: goldenrod solid 0.125rem;
+}

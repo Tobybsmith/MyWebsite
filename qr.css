@@ -1,0 +1,17 @@
+body{
+    background-color: bisque;
+    color: black;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+header{
+    border: darkgreen solid 0.125rem;
+    margin-block: 0.125rem;
+}
+main{
+    border: darkslateblue solid 0.125rem;
+}

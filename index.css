@@ -3,13 +3,16 @@
     font-size: 1em;
     --main-text-color: black;
     --main-link-color: black;
-    --main-link-ul-color: black;
     --main-bg-color: whitesmoke;
-    --sec--text-color: red;
-    --sec-link-color: red;
+    --sec--text-color:   #00695c ;
+    --sec-link-color:   #00695c ;
     --sec-bg-color: lightgrey;
 
     --margin-section-main: 2rem;
+
+    --thin-font: 100;
+    --med-font: 500;
+    --thick-font: 700;
 }
 
 body{
@@ -34,10 +37,20 @@ a{
 
 header a{
     text-decoration: none;
-    border-bottom: 0.125rem solid var(--main-link-ul-color);
+    border-bottom: 0.125rem solid var(--main-link-color);
     margin-inline: 1.5rem;
     color: var(--main-link-color);
 }
+
+
+.selected{
+    text-decoration: none;
+    border-bottom: 0.125rem solid var(--sec-link-color);
+    margin-inline: 1.5rem;
+    color: var(--sec-link-color);
+}
+
+
 header a:hover{
     border-bottom: none;
 }
@@ -51,9 +64,9 @@ svg{
     max-width: 50px;
 }
 
-img{
-    width: 300px;
-    aspect-ratio: 1;
+nav a{
+    font-weight: var(--thick-font);
+    font-size: 1.75rem;
 }
 
 .container{
@@ -72,7 +85,13 @@ img{
 }
 
 .aboutme{
-    
+    font-weight: var(--thick-font);
+    font-size: 1.75rem;
+}
+
+p{
+    font-weight: var(--thin-font);
+    font-size: 1rem;
 }
 
 .project_container{
@@ -83,13 +102,21 @@ img{
     width: 100vw;
 }
 
+.element{
+    width: 300px;
+    height: 300px;
+}
+
 .project_header{
+    font-weight: var(--thick-font);
+    font-size: 1.75rem;
 }
 
 .working{
     display: flex;
-    max-width: 50%;
+    max-width: 100%;
     align-items: center;
+    padding-bottom: 2rem;
 }
 
 .working a{
@@ -103,6 +130,11 @@ img{
 
 .working svg{
     max-width: 300px;
+    max-height: 300px;
+}
+.working img{
+    max-width: 300px;
+    max-height: 300px;
 }
 
 .blog_container{
@@ -115,6 +147,11 @@ img{
 }
 
 .blog_header{
+}
+
+.socials_header{
+    font-weight: var(--thick-font);
+    font-size: 1.75rem;
 }
 
 .socials_container{

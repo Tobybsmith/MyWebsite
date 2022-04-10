@@ -116,7 +116,7 @@ p{
     display: flex;
     max-width: 100%;
     align-items: center;
-    padding-bottom: 2rem;
+    padding: 2rem;
 }
 
 .working a{

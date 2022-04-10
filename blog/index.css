@@ -128,7 +128,7 @@ p{
     flex-direction: column;
     align-items: center;
     margin-bottom: var(--margin-section-main);
-    background-color: var(--sec-bg-color);
+    background-color: var(--main-bg-color);
     width: 100%;
     padding-bottom: 2rem;
 }

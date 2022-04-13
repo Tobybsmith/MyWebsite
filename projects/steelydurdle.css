@@ -1,0 +1,139 @@
+:root{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+    --main-text-color: #1f1f1f;
+    --main-link-color: #1f1f1f;
+    --main-bg-color: whitesmoke;
+    --sec--text-color:   #00695c;
+    --sec-link-color:   #00695c;
+    --sec-bg-color: lightgrey;
+
+    --inv-text-color: whitesmoke;
+    --inv-link-color: whitesmoke;
+    --inv-bg-color: #1f1f1f;
+    --inv-hl-color: #00695c;
+
+    --margin-section-main: 2rem;
+
+    --thin-font: 100;
+    --med-font: 500;
+    --thick-font: 700;
+    color: var(--inv-text-color)
+}
+
+body{
+    background-color: var(--inv-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+
+header{
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--inv-link-color);
+}
+
+header a{
+    text-decoration: none;
+    border-bottom: 0.125rem solid var(--inv-link-color);
+    margin-inline: 1.5rem;
+    color: var(--inv-link-color);
+}
+
+
+.selected{
+    text-decoration: none;
+    border-bottom: 0.125rem solid var(--inv-hl-color);
+    margin-inline: 1.5rem;
+    color: var(--inv-hl-color);
+}
+
+
+header a:hover{
+    border-bottom: none;
+}
+
+p{
+    margin: 0.5rem;
+    max-width: 50%;
+}
+
+nav a{
+    font-weight: var(--thick-font);
+    font-size: 1.75rem;
+}
+
+h1{
+    text-align: center;
+}
+
+.main_container{
+    display: grid;
+}
+
+.display_row{
+    display: flex;
+    flex-direction: row;
+    margin-block: 0.125rem;
+}
+
+.guess{
+    line-height: 1.75rem;
+    width: 50ch;
+    height: 1.75rem;
+    border: var(--inv-text-color) solid 0.125rem;
+    border-right: none;
+}
+
+.arrow{
+    font-size: 1.1rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: var(--inv-text-color) solid 0.125rem;
+    line-height: 1.75rem;
+    text-align: center;
+}
+
+.input_row{
+    margin-top: 7.5rem;
+}
+
+.input_box{
+    border: var(--inv-text-color) solid 0.125rem;
+    background: none;
+    caret-color: var(--inv-text-color);
+    outline: none;
+    width: 50ch;
+    color: var(--inv-text-color)
+}
+
+.submit{
+    border: var(--inv-hl-color) solid 0.125rem;
+    background-color: var(--inv-hl-color);
+    color: var(--inv-text-color);
+    width: 10ch
+}
+
+.submit:hover{
+    border: var(--inv-text-color) solid 0.125rem;
+    background-color: var(--inv-text-color);
+    color: var(--inv-hl-color);
+}
+
+.completed{
+    background: var(--inv-link-color)
+}

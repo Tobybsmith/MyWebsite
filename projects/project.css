@@ -1,60 +1,72 @@
-:root
-{
-    font-size: 1.125em;
+:root{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+    --main-text-color: black;
+    --main-link-color: black;
+    --main-bg-color: whitesmoke;
+    --sec--text-color:   #00695c;
+    --sec-link-color:   #00695c;
+    --sec-bg-color: lightgrey;
+
+    --margin-section-main: 2rem;
+
+    --thin-font: 100;
+    --med-font: 500;
+    --thick-font: 700;
 }
 
 body{
-    background-color: bisque;
-    color: black;
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
     margin: 0;
-    max-width: 100vw;
 }
+
+header{
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+
+header{
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+
 a{
     text-decoration: none;
-    color: black;
-    padding: 0.125rem 1rem 0.125rem 1rem;
-    border: darkgoldenrod solid 0.125rem;
+    color: var(--main-link-color);
 }
-h1{
-    color:black;
+
+header a{
+    text-decoration: none;
+    border-bottom: 0.125rem solid var(--main-link-color);
+    margin-inline: 1.5rem;
+    color: var(--main-link-color);
 }
-header{
-    text-align: center;
-    margin-bottom: 2rem;
+
+
+.selected{
+    text-decoration: none;
+    border-bottom: 0.125rem solid var(--sec-link-color);
+    margin-inline: 1.5rem;
+    color: var(--sec-link-color);
 }
-img{
-    height: 100%;
+
+
+header a:hover{
+    border-bottom: none;
 }
-.element p{
-    margin-inline: 1rem;
+
+p{
+    margin: 0.5rem;
+    max-width: 50%;
 }
-.title
-{
-    grid-row: 1;
-    grid-column: 1/3;
-    border: darkgreen solid 0.125rem;
-    text-align: center;
-}
-.container{
-    border: darkblue solid 0.125rem;
-    grid-column: 1/3;
-}
-.element{
-    border: darkolivegreen solid 0.125rem;
-    display: flex;
-    align-items: center;
-}
-.element a{
-    border: none;
-    text-decoration: underline;
-    color: blue;
-    padding: none;
-    margin: none;
-}
-.element img{
-    margin: auto;
-}
-main{
-    display: grid;
-    border: brown solid 0.125rem;
+
+nav a{
+    font-weight: var(--thick-font);
+    font-size: 1.75rem;
 }

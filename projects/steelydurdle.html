@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+    <script src="./scripts/steelydurdle.js"></script>
+    <title>Steely Durdle</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="home selected">Home</a>
+            <a href="/blog/index.html" class="blog">Blog</a>
+            <a href="/projects/index.html" class="projects">Projects</a>
+            <a href="/media/img/selfie.jpg" class="gallery">Gallery ?</a>
+            <a href="https://emmapirieportfolio.weebly.com/" class="emma">Emma</a>
+        </nav>
+    </header>
+    <main>
+        <h1>STEELY DURDLE</h1>
+        <!--
+            should be a grid with spacing
+            should look like heardle
+        -->
+        <div class="main_container">
+            <!--
+                display field:
+            -->
+            <div class="display_row">
+                <span class="guess" id="guessText"></span>
+                <span class="arrow" id="arrow"></span>
+            </div>
+            <div class="display_row">
+                
+            </div>
+            <!--
+                text getting part of the heardle:
+            -->
+            <div class="row">
+                <input type="text" name="text_box" id="entry">
+                <button class="submit" onclick="processInput()">Submit</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

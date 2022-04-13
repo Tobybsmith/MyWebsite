@@ -1,0 +1,28 @@
+{
+  "name": "mywebsite",
+  "version": "1.0.0",
+  "description": "First Commit",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log(\"hello World)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tobybsmith/MyWebsite.git"
+  },
+  "keywords": [
+    "website",
+    "nodejs",
+    "web",
+    "webdev"
+  ],
+  "author": "Toby Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tobybsmith/MyWebsite/issues"
+  },
+  "homepage": "https://github.com/Tobybsmith/MyWebsite#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

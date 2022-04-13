@@ -23,6 +23,7 @@ var songList = [].concat(...songArray)
 songList = songList.map(function(x) {return x.toUpperCase()})
 
 var song = getSongOfDay().toUpperCase()
+var songID = getSongID()
 console.log(song)
 
 //now all we have to do is the music part
@@ -31,7 +32,18 @@ console.log(song)
 function getSongOfDay()
 {
     //need to randomly pick a song from the list and return it
+    //and then pick the song's spotify ID and serve that as well
     return songList[Math.floor(Math.random()*songList.length)]
+}
+
+function getSongID()
+{
+    //use API to get the song name's spotify ID
+    //then create the player
+    //then limit the playtime of a song
+    //and hide info about the player except for the play button
+    //the create the additional time buttons
+    //then bring it all together
 }
 
 function processInput()

@@ -1,3 +1,5 @@
+
+
 var guesses = 0
 //80 songs in total
 const albums = {

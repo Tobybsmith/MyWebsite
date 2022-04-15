@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/steelydurdle.css">
+    <script src="./scripts/steelydurdle.js"></script>
+    <title>Steely Durdle</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="home selected">Home</a>
+            <a href="/blog/index.html" class="blog">Blog</a>
+            <a href="/projects/index.html" class="projects">Projects</a>
+            <a href="/media/img/selfie.jpg" class="gallery">Gallery ?</a>
+            <a href="https://emmapirieportfolio.weebly.com/" class="emma">Emma</a>
+        </nav>
+    </header>
+    <main>
+        <h1>STEELY DURDLE</h1>
+        <!--
+            should be a grid with spacing
+            should look like heardle
+        -->
+        <div class="main_container">
+            <!--
+                display field:
+            -->
+            <div class="display_row">
+                <span class="guess" id="guessText1"></span>
+                <span class="arrow" id="arrow1"></span>
+            </div>
+            <div class="display_row">
+                <span class="guess" id="guessText2"></span>
+                <span class="arrow" id="arrow2"></span>
+            </div>
+            <div class="display_row">
+                <span class="guess" id="guessText3"></span>
+                <span class="arrow" id="arrow3"></span>
+            </div>
+            <div class="display_row">
+                <span class="guess" id="guessText4"></span>
+                <span class="arrow" id="arrow4"></span>
+            </div>
+            <div class="display_row">
+                <span class="guess" id="guessText5"></span>
+                <span class="arrow" id="arrow5"></span>
+            </div>
+            <div class="display_row">
+                <span class="guess" id="guessText6"></span>
+                <span class="arrow" id="arrow6"></span>
+            </div>
+            <!--
+                text getting part of the heardle:
+            -->
+            <div class="input_row">
+                <input class="input_box" type="text" name="text_box" id="entry">
+                <button class="submit" onclick="processInput()">Submit</button>
+            </div>
+
+            <div class="player">Player</div>
+
+            <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
+        </div>
+    </main>
+</body>
+</html>

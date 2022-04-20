@@ -70,3 +70,25 @@ nav a{
     font-weight: var(--thick-font);
     font-size: 1.75rem;
 }
+
+img{
+    max-width: 300px;
+    margin: auto;
+}
+
+.element{
+    display: flex;
+}
+
+.title{
+    text-align: center;
+    background-color: var(--sec-bg-color);
+}
+
+.element{
+    background-color: var(--main-bg-color);
+}
+
+.element:nth-child(odd){
+    background-color: var(--sec-bg-color);
+}

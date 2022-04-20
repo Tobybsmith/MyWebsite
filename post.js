@@ -3,24 +3,32 @@ const express = require('express')
 const bodyParser = require("body-parser")
 const fs = require('fs')
 const path = require('path')
-const parser = require('node-html-parser')
 var router = express.Router();
 var app = express();
-var root = parser.parse(fs.readFileSync("./public/projects/post.html"))
 
 //need to specify a new static directory here for css and stuff
 //public serves the stuff above
 app.use(express.static('/public/styles/'));
-app.use(bodyParser.text());
+app.use(express.json())
 
 router.post('/', function(req, res) {
-    res.set('Content-type', 'text/plain')
-    res.send(`You sent: ${req.body} to Express`)
+    res.set('Content-type', 'application/json')
+    res.send(`You sent: ${req.body} to PlantMonitor`)
     console.log(req.body)
-    //does not dynamically update HTML as expected
-    //probably need some kind of AJAX call here
-    //to dynamically update content w/o refresh
-    root.getElementById("post").innerText = req.body
+    //write all the before, then the post, then the after to a HTML file called post.html
+    //and send that on a get request
+    //open the html file:
+    /*fs.readFile("./public/projects/post.html", 'utf-8', function(err, data) {
+        if(err)
+        {
+            return console.log(err)
+        }
+        var result = data.replace(/POST REQ [0-9]{0,}/g, "POST REQ " + req.body);
+        fs.writeFile("./public/projects/post.html", result, 'utf-8', function(err){
+            if (err) return console.log(err);
+        });
+    })*/
+    
 })
 
 router.get('/', function(req, res){

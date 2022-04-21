@@ -22,7 +22,7 @@ app.post('/', function (req, res) {
 
 //basic get
 app.get('/', (req, res) => {
-    res.sendFile("/public/index.html");
+    res.render("/public/index.html");
   })
 
 //runs the app frfr

@@ -9,26 +9,37 @@ var app = express();
 //need to specify a new static directory here for css and stuff
 //public serves the stuff above
 app.use(express.static('/public/styles/'));
-app.use(express.json())
+app.use(bodyParser.text());
+app.use(express.urlencoded({extended: true}));
 
 router.post('/', function(req, res) {
-    res.set('Content-type', 'application/json')
+    res.set('Content-type', 'text/plain')
     res.send(`You sent: ${req.body} to PlantMonitor`)
-    console.log(req.body)
-    //write all the before, then the post, then the after to a HTML file called post.html
-    //and send that on a get request
-    //open the html file:
-    /*fs.readFile("./public/projects/post.html", 'utf-8', function(err, data) {
+    var bodyString = JSON.parse(String(req.body));
+    console.log(bodyString)
+    var t = bodyString.temp
+    var m = bodyString.moisture
+    var l = bodyString.light
+    var lightRegex = /Current Light Level: [0-9]{0,}/g
+    var moistureRegex = /Current Soil Moisture: [0-9]{0,}/g
+    var tempRegex = /Current Room Temperature: [0-9]{0,}/g
+    //process the input before changing the html file
+    fs.readFile(path.join(__dirname, '/public/projects/post.html'), 'utf-8', function(err, data){
         if(err)
         {
-            return console.log(err)
+            return console.log(err);
         }
-        var result = data.replace(/POST REQ [0-9]{0,}/g, "POST REQ " + req.body);
-        fs.writeFile("./public/projects/post.html", result, 'utf-8', function(err){
-            if (err) return console.log(err);
-        });
-    })*/
-    
+        var result = data.replace(lightRegex, "Current Light Level: " + l)
+                         .replace(moistureRegex, "Current Soil Moisture: " + m)
+                         .replace(tempRegex, "Current Room Temperature: " + y);
+        fs.writeFile(path.join(__dirname, '/public/projects/post.html'), result, 'utf-8', function(err)
+        {
+            if(err)
+            {
+                console.log(err);
+            }
+        })
+    })
 })
 
 router.get('/', function(req, res){

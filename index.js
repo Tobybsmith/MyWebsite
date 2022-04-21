@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-
 const bodyParser = require("body-parser")
 
 var plant_script = require("./post.js")
@@ -8,7 +7,7 @@ var plant_script = require("./post.js")
 
 //serves all the static content
 app.use(express.static('public/'))
-//post request handled by body-parser, have to enable plaintext mode
+
 app.use(bodyParser.text());
 
 app.use("/post", plant_script)
@@ -17,12 +16,13 @@ app.use("/post", plant_script)
 app.post('/', function (req, res) {
     res.set('Content-type', 'text/plain')
     res.send(`You sent: ${req.body} to Express`)
-    console.log("POST IN /")
+    var bodyString = JSON.parse(String(req.body));
+    console.log(bodyString);
 })
 
 //basic get
 app.get('/', (req, res) => {
-    res.send('hello world')
+    res.sendFile("/public/index.html");
   })
 
 //runs the app frfr

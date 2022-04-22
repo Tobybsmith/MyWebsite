@@ -3,6 +3,8 @@ const express = require('express')
 const bodyParser = require("body-parser")
 const fs = require('fs')
 const path = require('path')
+//taken from xposedbones's github
+const map = (value, x1, y1, x2, y2) => (value - x1) * (y2 - x2) / (y1 - x1) + x2;
 var router = express.Router();
 var app = express();
 
@@ -31,7 +33,7 @@ router.post('/', function(req, res) {
         }
         var result = data.replace(lightRegex, "Current Light Level: " + l)
                          .replace(moistureRegex, "Current Soil Moisture: " + m)
-                         .replace(tempRegex, "Current Room Temperature: " + y);
+                         .replace(tempRegex, "Current Room Temperature: " + t);
         fs.writeFile(path.join(__dirname, '/public/projects/post.html'), result, 'utf-8', function(err)
         {
             if(err)
